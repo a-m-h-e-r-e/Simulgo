@@ -1,0 +1,274 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cell {
+  border: 1px solid #472d30;
+  /* border: 1px solid rgb(175, 216, 248); */
+  margin: 10;
+  background-color: rgb(230, 241, 245);
+  /* border: 1px blue solid; */
+  width: 20px;
+  height: 20px;
+
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  /* transition: all 500ms ease-in; */
+}
+
+table {
+  border-spacing: 0;
+}
+
+.board {
+  border-collapse: collapse;
+}
+
+.visited {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.shortest-path {
+  border: 3px solid rgb(175, 216, 248);
+  /* background-color: rgb(255, 254, 106); */
+  background-color: #7a9e9f;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: triangletwo;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  transform: rotateY(180deg);
+  /* perspective: 1000px; */
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.72222;
+  color: #34495e;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#board {
+  margin: auto;
+  border-collapse: collapse;
+}
+
+#board td {
+  border: 1px solid #472d30;
+
+  /* border: 1px solid rgb(175, 216, 248); */
+  width: 25px;
+  height: 25px;
+}
+
+.unvisited {
+  border: 1px solid rgb(175, 216, 248);
+  background-color: white;
+}
+
+.wall {
+  animation-name: wallAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+td,
+th {
+  text-align: center;
+  font-size: 10px;
+  flex-wrap: "wrap";
+  padding: 0;
+  /* perspective: 500px; */
+}
+
+@keyframes wallAnimation {
+  0% {
+    transform: scale(0.3);
+    background-color: #723d46;
+    /* background-color: rgb(12, 53, 71); */
+  }
+  50% {
+    transform: scale(1.6);
+    background-color: #723d46;
+    /* background-color: rgb(12, 53, 71); */
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: rgb(12, 53, 71); */
+    /* background-color: #ef476f; */
+    background-color: #723d46;
+  }
+}
+
+.visited {
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.3);
+
+    /* background-color: rgba(0, 0, 66, 0.75); */
+    background-color: #7a9e9f;
+    border-radius: 100%;
+  }
+  50% {
+    /* background-color: rgba(17, 104, 217, 0.75); */
+    background-color: #245c5e;
+  }
+  75% {
+    transform: scale(1.6);
+    /* background-color: rgba(0, 217, 159, 0.75); */
+    background-color: #86d7da;
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: rgba(0, 190, 218, 0.75); */
+    background-color: #7a9e9f;
+  }
+}
+
+.current {
+  border: 1px solid rgb(175, 216, 248);
+  /* background-color: rgb(255, 254, 106); */
+  background-color: #e08476;
+}
+
+.instantshortest-path {
+  /*border: 1px solid rgb(175, 216, 248);*/
+  background-color: rgb(255, 254, 106);
+}
+
+@keyframes triangletwo {
+  0% {
+    transform: scale(0.3);
+    /* background-color: rgb(255, 254, 106); */
+    background-color: #ffca3a;
+    /* background-color: #ffca3a; */
+
+    /* 7a9e9f */
+  }
+  50% {
+    transform: scale(1.2);
+    /* transform: rotateY(180deg); */
+    background-color: #ffca3a;
+
+    /* background-color: rgb(255, 254, 106); */
+  }
+  100% {
+    transform: scale(0.96);
+    /* background-color: rgb(255, 254, 106); */
+    background-color: #ffca3a;
+  }
+}
+
+.startTransparent {
+  /* border: 1px solid rgb(175, 216, 248); */
+  opacity: 0.5;
+  /* background-image: url(/public/start.png); */
+  /* background-color: rgb(255, 254, 106); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.start {
+  /* border: 1px solid rgb(175, 216, 248); */
+  background-image: url(../image/start.png);
+  /* background-color: rgb(255, 254, 106); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+
+  /* background-color: blue; */
+}
+
+.end {
+  background-image: url(../image/end.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes specialNodes {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    color: green;
+    transform: scale(2.2);
+    /* transform: rotateY(180deg); */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#control {
+  /* display: inline-block; */
+  /* align-items: center; */
+  text-align: center;
+  margin: 0 auto;
+  width: 6 0%;
+  padding: 10px;
+  /* margin-bottom: 30px; */
+}

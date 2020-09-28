@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="css/App.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Simulgo</title>
+  </head>
+  <body>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
+    <p id="root"></p>
+    <div style="display: inline-block; width: 100%">
+      <div id="control">
+        <h1>AlgoSimulation</h1>
+        <h2>Simulate your favorite algorithm!!!!!</h2>
+
+        <!-- <p>Please select your gender:</p> -->
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-light active">
+            <input type="radio" name="cellType" id="START" value="START" />
+            start
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="cellType" id="TARGET" value="TARGET" />
+            end
+          </label>
+          <label class="btn btn-light">
+            <input type="radio" name="cellType" id="WALL" value="WALL" /> wall
+          </label>
+        </div>
+
+        <select
+          name="speed"
+          id="speed"
+          class="form-control"
+          style="width: 90px; display: inline"
+        >
+          <option value="700">very slow</option>
+          <option value="500">slow</option>
+          <option value="100">normal</option>
+          <option value="1">fast</option>
+        </select>
+        <select
+          name="distance"
+          id="distance"
+          class="form-control"
+          style="width: 90px; display: inline"
+        >
+          <option value="false">hide</option>
+          <option value="true">show</option>
+        </select>
+
+        <button onclick="start()" type="button" class="btn btn-primary">
+          start simulation
+        </button>
+      </div>
+      <br />
+    </div>
+    <script src="js/generateTable.js"></script>
+    <script src="js/algosimu.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
